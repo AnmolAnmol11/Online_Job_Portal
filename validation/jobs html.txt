@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Job Listings</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <h1>Available Jobs</h1>
+    <ul>
+        <li th:each="job : ${jobs}">
+            <h3 th:text="${job.title}"></h3>
+            <p th:text="${job.description}"></p>
+            <button th:onclick="'location.href=\'/jobs/apply/' + ${job.id} + '\''">Apply</button>
+        </li>
+    </ul>
+</body>
+</html>

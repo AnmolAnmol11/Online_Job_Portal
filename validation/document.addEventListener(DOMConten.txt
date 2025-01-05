@@ -1,0 +1,42 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("registrationForm");
+
+    form.addEventListener("submit", (event) => {
+        let isValid = true;
+
+        // Username validation
+        const username = document.getElementById("username");
+        const usernameError = document.getElementById("usernameError");
+        if (username.value.trim().length < 3) {
+            isValid = false;
+            usernameError.textContent = "Username must be at least 3 characters.";
+        } else {
+            usernameError.textContent = "";
+        }
+
+        // Email validation
+        const email = document.getElementById("email");
+        const emailError = document.getElementById("emailError");
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email.value)) {
+            isValid = false;
+            emailError.textContent = "Invalid email address.";
+        } else {
+            emailError.textContent = "";
+        }
+
+        // Password validation
+        const password = document.getElementById("password");
+        const passwordError = document.getElementById("passwordError");
+        if (password.value.length < 6) {
+            isValid = false;
+            passwordError.textContent = "Password must be at least 6 characters.";
+        } else {
+            passwordError.textContent = "";
+        }
+
+        if (!isValid) {
+            event.preventDefault();
+        }
+    });
+});

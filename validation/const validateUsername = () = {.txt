@@ -1,0 +1,12 @@
+const validateUsername = () => {
+    const username = document.getElementById("username");
+    const error = document.getElementById("usernameError");
+
+    if (username.value.trim().length < 3) {
+        error.textContent = "Username must be at least 3 characters long.";
+        return false;
+    } else {
+        error.textContent = "";
+        return true;
+    }
+};

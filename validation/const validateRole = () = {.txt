@@ -1,0 +1,12 @@
+const validateRole = () => {
+    const role = document.getElementById("role");
+    const error = document.getElementById("roleError");
+
+    if (role.value === "") {
+        error.textContent = "Please select a role.";
+        return false;
+    } else {
+        error.textContent = "";
+        return true;
+    }
+};
