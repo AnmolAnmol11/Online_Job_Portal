@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" version="3.0">
+    <servlet>
+        <servlet-name>JobPortalServlet</servlet-name>
+        <servlet-class>com.jobportal.servlets.JobPortalServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>JobPortalServlet</servlet-name>
+        <url-pattern>/JobPortalServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UserProfileServlet</servlet-name>
+        <servlet-class>com.jobportal.servlets.UserProfileServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserProfileServlet</servlet-name>
+        <url-pattern>/UserProfileServlet</url-pattern>
+    </servlet-mapping>
+</web-app>
