@@ -1,0 +1,7 @@
+src/main/java/com/jobportal/servlets/
+    UserServlet.java
+    ProfileServlet.java
+src/main/webapp/
+    WEB-INF/web.xml
+    register.jsp
+    profile.jsp
