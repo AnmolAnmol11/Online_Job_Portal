@@ -1,0 +1,23 @@
+root
+│
+├── backend
+│   ├── src
+│   │   ├── main
+│   │   │   ├── java
+│   │   │   │   ├── com.jobportal
+│   │   │   │   │   ├── controller
+│   │   │   │   │   ├── model
+│   │   │   │   │   ├── repository
+│   │   │   │   │   ├── service
+│   │   │   ├── resources
+│   │   │       ├── application.properties
+│   │
+├── frontend
+│   ├── public
+│   ├── src
+│       ├── components
+│       ├── pages
+│       ├── utils
+│
+├── docker-compose.yml
+├── README.md

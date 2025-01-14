@@ -1,0 +1,19 @@
+package com.jobportal.services;
+
+import com.jobportal.dao.UserDAO;
+import com.jobportal.model.User;
+
+public class UserService {
+    private UserDAO userDAO;
+
+    public UserService() {
+        this.userDAO = new UserDAO();
+    }
+
+    public boolean registerUser(User user) {
+        if (user.getName() == null || user.getEmail() == null || user.getPhone() == null) {
+            return false;
+        }
+        return userDAO.saveUser(user);
+    }
+}

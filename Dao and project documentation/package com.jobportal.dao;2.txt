@@ -1,0 +1,16 @@
+package com.jobportal.dao;
+
+import static org.junit.jupiter.api.Assertions.*;
+import com.jobportal.model.User;
+import org.junit.jupiter.api.Test;
+
+public class UserDAOTest {
+    @Test
+    public void testSaveUser() {
+        UserDAO dao = new UserDAO();
+        User user = new User("Jane Doe", "jane@example.com", "9876543210");
+
+        boolean result = dao.saveUser(user);
+        assertTrue(result);
+    }
+}

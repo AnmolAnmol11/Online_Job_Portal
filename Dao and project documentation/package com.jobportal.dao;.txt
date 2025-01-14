@@ -1,0 +1,10 @@
+package com.jobportal.dao;
+
+import com.jobportal.model.User;
+
+public class UserDAO {
+    public boolean saveUser(User user) {
+        // Pretend to save user in the database
+        return true;
+    }
+}
